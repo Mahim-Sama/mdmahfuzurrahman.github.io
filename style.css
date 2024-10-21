@@ -1,0 +1,1678 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    font-size: 17px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(images/peakpx.jpg);
+    color: whitesmoke;
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Move to top button */
+.move-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    height: 60px;
+    width: 60px;
+    background-color: #262626;
+    /* The background color */
+    border: 1px solid #267e6f;
+    color: #267e6f;
+    /* Icon color */
+    padding: 15px;
+    border-radius: 50%;
+    text-align: center;
+    display: none;
+    /* Initially hidden */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add a shadow */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    /* Smooth appearance */
+}
+
+.move-to-top i {
+    font-size: 30px;
+}
+
+.move-to-top:hover {
+    background-color: #267e6f;
+    /* Change color on hover */
+    color: #fff;
+    transform: translateY(-5px);
+    /* Lift slightly on hover */
+}
+
+/* Show the button when user scrolls */
+.show-move-to-top {
+    display: block;
+}
+
+
+
+#header {
+    width: 100%;
+    height: 115vh;
+    background-image: url(images/Banner.png);
+    background-position: right;
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+    margin-left: 3%;
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.8s ease forwards;
+    ;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+
+    line-height: 1.2;
+    opacity: 0;
+    /* Initially hidden */
+    transform: translateY(20px);
+    /* Initially moved down by 20px */
+    animation: fadeInUp 1.9s ease forwards;
+    /* Fade-in and move up */
+    animation-delay: 1.5s;
+    /* Start animation after 0.6s */
+}
+
+.header-text h1 span {
+    color: #3adeaf;
+    font-size: 60px;
+}
+
+
+.header-text p {
+    font-size: 50px;
+    font-weight: 550;
+
+    margin-bottom: 20px;
+    opacity: 0;
+    /* Initially hidden */
+    transform: translateY(20px);
+    /* Initially moved down by 20px */
+    animation: fadeInUp 1.2s ease forwards;
+    /* Fade-in and move up */
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        /* Starts slightly below */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* Ends at its normal position */
+    }
+}
+
+nav {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 155px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 20px 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 23px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #3adeaf;
+    position: absolute;
+    left: 50%;
+    /* Start at the center */
+    bottom: -6px;
+    transform: translateX(-50%);
+    /* Center the underline */
+    transition: width 0.5s ease;
+    /* Smooth transition for the width */
+    transform-origin: center;
+    /* Expand from the center */
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    transform: translateX(-50%);
+    /* Keep it centered as it grows */
+}
+
+/*--------------------About-------------------------------*/
+
+#about {
+    padding: 10% 0;
+    color: whitesmoke;
+    /*border: 4px solid red;*/
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /*border: 4px solid red;*/
+}
+
+
+
+.about-col-01 img {
+    width: 400px;
+    /* Scale the image to fit the width of the frame */
+    height: 600px;
+    /* Maintain aspect ratio */
+    object-fit: cover;
+    /* Ensure the image covers the entire frame area */
+    max-width: 70%;
+    /* Prevent the image from exceeding the frame's width */
+    max-height: 100%;
+    /* Ensure it doesn't exceed the frame's height */
+    border: 1px solid #3adeaf;
+    border-radius: 15px;
+}
+
+.about-col-01 {
+    flex-basis: 35%;
+}
+
+.about-col-02 {
+    flex-basis: 60%;
+    margin-right: 5%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+
+    position: relative;
+    margin-bottom: 20px;
+    /* Space below the h1  /* Center the text (optional) */
+}
+
+.sub-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    /* Start the underline from the center */
+    bottom: -10px;
+    /* Position the underline below the text */
+    transform: translateX(-50%);
+    /* Move the underline back to the center */
+    width: 100%;
+    /* The underline spans the full width (constant) */
+    height: 4px;
+    /* Thickness of the underline */
+    background-color: #3adeaf;
+    /* Color of the underline */
+    border-radius: 2px;
+    /* Rounded corners for the underline */
+}
+
+.intro {
+    font-size: 23px;
+    margin-top: 10px;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #3adeaf;
+    position: absolute;
+    left: 0;
+    /* Start at the center */
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 100%
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #3adeaf;
+    font-size: 20px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/*______________________PROJECTS________________________*/
+
+#projects {
+    padding: 40px 0;
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 30px;
+    margin-top: 50px;
+}
+
+.projects-list div {
+    background: #262626;
+    padding: 40px;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 15px;
+    position: relative;
+    transition: background 0.6s, transform 0.6s;
+}
+
+.projects-list div h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.projects-list div ul {
+    list-style: circle bold;
+    margin-left: 3%;
+    margin-bottom: 7%;
+}
+
+.projects-list div a {
+    position: absolute;
+    bottom: 9%;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    display: inline-block;
+    color: #3adeaf;
+    border: 3px solid #3adeaf;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5),
+        /* Soft shadow */
+        0 6px 24px rgba(0, 0, 0, 0.5);
+    /* Deeper shadow for a subtle 3D effect */
+    transition: all 0.3s ease;
+}
+
+.projects-list div a:hover {
+    background: #267e6f;
+    /* Slight change in background for hover */
+    box-shadow: 0 9px 18px rgba(0, 0, 0, 0.4),
+        /* More intense shadow on hover */
+        0 13px 26px rgba(0, 0, 0, 0.20);
+    /* A deeper shadow for a 3D feel */
+    transform: translateY(-3px);
+}
+
+.projects-list div:hover {
+    background-image: linear-gradient(to top, #289280, #3adeaf, #97ffe5);
+    color: #333333;
+    transform: translateY(-10px) scale(1.03);
+}
+
+.projects-list div:hover a {
+    color: #333333;
+    border: 3px solid #333333;
+}
+
+.projects-list div:hover a:hover {
+    color: #f0f0f0;
+    border-color: #fff;
+}
+
+/*________________________Publications________________*/
+
+#publication {
+    padding: 50px 0;
+}
+
+.publication-list {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 8%;
+    margin-top: 50px;
+}
+
+.publication-item {
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.publication-item img {
+    width: 375px;
+    /* Scale the image to fit the width of the frame */
+    height: 550px;
+    /* Maintain aspect ratio */
+    display: block;
+    border-radius: 12px;
+    /* Ensure the image covers the entire frame area */
+    /* Ensure it doesn't exceed the frame's height */
+    transition: transform 0.6s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #289280);
+    border-radius: 12px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    font-weight: 550;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.layer p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: #267e6f;
+    text-decoration: none;
+    line-height: 85px;
+    background: #fff;
+    opacity: 80%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5),
+        /* Soft shadow */
+        0 6px 24px rgba(0, 0, 0, 0.5);
+    /* Deeper shadow for a subtle 3D effect */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effects */
+}
+
+.layer a:hover {
+    color: #f0f0f0;
+    background: #267e6f;
+    /* Slight change in background for hover */
+    box-shadow: 0 9px 18px rgba(0, 0, 0, 0.4),
+        /* More intense shadow on hover */
+        0 13px 26px rgba(0, 0, 0, 0.20);
+    /* A deeper shadow for a 3D feel */
+    transform: translateY(-3px);
+    /* Lift the button up slightly on hover */
+}
+
+
+.layer a i {
+    font-size: 35px;
+}
+
+.icon-container {
+    display: flex;
+    /* Use flexbox to align the icons side by side */
+    justify-content: center;
+    /* Center the icons horizontally */
+    gap: 20px;
+    /* Adds space between the icons */
+    margin-top: 20px;
+}
+
+.publication-item:hover img {
+    transform: scale(1.1);
+}
+
+.publication-item:hover .layer {
+    height: 100%;
+}
+
+/*____________________RESEARCHES________________________________________________*/
+
+.research-list {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 8%;
+    margin-top: 50px;
+}
+
+.research-item {
+    position: relative;
+    width: 375px;
+    /* Set your preferred width */
+    height: 550px;
+    /* Set your preferred height */
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f5f5f5;
+    /* Background color of the container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #262626;
+}
+
+.content {
+    z-index: 1;
+    /* Ensures the content stays above the background */
+    padding: 20px;
+    transition: transform 0.6s;
+}
+
+.content h2 {
+    font-size: 18px;
+    color: #262626;
+}
+
+.overlay-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #289280);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    transition: height 0.5s ease;
+    /* Smooth animation for height */
+    z-index: 2;
+    /* Ensure the overlay stays on top of the content */
+    border-radius: 12px;
+    /* Optional: make the overlay match the div shape */
+    overflow: hidden;
+    /* Hide overflow when collapsed */
+}
+
+.overlay-layer h3 {
+    font-size: 30px;
+}
+
+.research-item:hover .overlay-layer {
+    height: 100%;
+    /* Expand the overlay to full height on hover */
+}
+
+.research-item:hover .content {
+    transform: scale(1.1);
+}
+
+
+.lds-roller,
+.lds-roller div,
+.lds-roller div:after {
+    box-sizing: border-box;
+}
+
+.lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+}
+
+.lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+}
+
+.lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7.2px;
+    height: 7.2px;
+    border-radius: 50%;
+    background: currentColor;
+    margin: -3.6px 0 0 -3.6px;
+}
+
+.lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+}
+
+.lds-roller div:nth-child(1):after {
+    top: 62.62742px;
+    left: 62.62742px;
+}
+
+.lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+}
+
+.lds-roller div:nth-child(2):after {
+    top: 67.71281px;
+    left: 56px;
+}
+
+.lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+}
+
+.lds-roller div:nth-child(3):after {
+    top: 70.90963px;
+    left: 48.28221px;
+}
+
+.lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+}
+
+.lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+}
+
+.lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+}
+
+.lds-roller div:nth-child(5):after {
+    top: 70.90963px;
+    left: 31.71779px;
+}
+
+.lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+}
+
+.lds-roller div:nth-child(6):after {
+    top: 67.71281px;
+    left: 24px;
+}
+
+.lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+}
+
+.lds-roller div:nth-child(7):after {
+    top: 62.62742px;
+    left: 17.37258px;
+}
+
+.lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+}
+
+.lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12.28719px;
+}
+
+@keyframes lds-roller {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*---------------------------------------MY CV----------------------------------------*/
+/* CV Preview Section */
+#cv-section {
+    padding: 50px 0;
+}
+
+.cv-preview {
+    position: relative;
+    width: 375px;
+    /* Adjust width to match your design */
+    height: 550px;
+    /* Aspect ratio for CV preview */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cv-preview img {
+    border-radius: 12px;
+    border: none;
+    transition: transform 0.6s ease;
+    width: 375px;
+    /* Adjust width to match your design */
+    height: 550px;
+}
+
+/* Hover layer */
+.layer-cv {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), #289280);
+    border-radius: 12px;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px;
+    transition: height 0.6s ease;
+}
+
+.cv-preview:hover .layer-cv {
+    height: 100%;
+    bottom: 0px;
+}
+
+.cv-preview:hover img {
+    transform: scale(1.1);
+}
+
+.layer-cv h3 {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.icon-container-cv {
+    display: flex;
+    gap: 20px;
+    margin-top: 80px;
+}
+
+.icon-container-cv a {
+    color: #fff;
+    background: #289280;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+    text-align: center;
+    font-size: 20px;
+}
+
+.icon-container-cv a i {
+    font-size: 30px;
+}
+
+.icon-container-cv a:hover {
+    background: #fff;
+    color: #289280;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 500;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 9px 18px rgba(0, 0, 0, 0.4),
+        /* More intense shadow on hover */
+        0 13px 26px rgba(0, 0, 0, 0.20);
+}
+
+.modal-content {
+    background-color: #289280;
+    border-radius: 16px;
+    padding: 12px;
+    width: 80%;
+    height: 90%;
+    position: relative;
+    box-shadow: 0 9px 18px rgba(0, 0, 0, 0.4),
+        /* More intense shadow on hover */
+        0 13px 26px rgba(0, 0, 0, 0.20);
+}
+
+/* Close button inside the modal */
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: -65px;
+    color: #267e6f;
+    text-decoration: none;
+    line-height: 85px;
+    background: #fff;
+    opacity: 80%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5),
+        /* Soft shadow */
+        0 6px 24px rgba(0, 0, 0, 0.5);
+    /* Deeper shadow for a subtle 3D effect */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effects */
+}
+
+.close-btn i {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.close-btn:hover {
+    color: #f0f0f0;
+    background: #267e6f;
+    /* Slight change in background for hover */
+    box-shadow: 0 9px 18px rgba(0, 0, 0, 0.4),
+        /* More intense shadow on hover */
+        0 13px 26px rgba(0, 0, 0, 0.20);
+    /* A deeper shadow for a 3D feel */
+    transform: translateY(-3px);
+    /* Lift the button up slightly on hover */
+}
+
+/*____________________________________________Extacurricular Activities and Interests___________________________________________________________*/
+
+#extracurricular {
+    padding: 50px 0;
+}
+
+/* Activity list styles */
+.activity-list {
+    margin-bottom: 40px;
+}
+
+.act-gallery-title {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+
+.event-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.activity-item {
+    padding: 20px;
+    background-color: #262626;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.6s ease;
+}
+
+.activity-item:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 128, 128, 0.8);
+    /* Light shadow with aquamarine tint */
+}
+
+.activity-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.activity-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Certificate Gallery__________________OLD */
+.certificates {
+    margin-top: 40px;
+}
+
+.gallery-title {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*________________________________________________new_______________________________________________*/
+.slideshow-container {
+    max-width: 1000px;
+    /* Set a max width for the slideshow */
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    /* Ensure content doesn't overflow */
+}
+
+.mySlides {
+    display: none;
+    /* Hide all slides by default */
+}
+
+.slide-images {
+    display: flex;
+    /* Use flexbox to align images side by side */
+    justify-content: space-between;
+    /* Space items evenly */
+}
+
+.image-container {
+    width: 48%;
+    /* Take up about half of the slide's width */
+    position: relative;
+    /* For positioning captions */
+}
+
+.image-container img {
+    width: 100%;
+    /* Make images responsive */
+    height: 400px;
+    /* Maintain aspect ratio */
+}
+
+/* Caption styling */
+.slide-caption {
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    padding: 8px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+}
+
+/* Additional styles */
+.numbertext {
+    color: #fff;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.slide-prev,
+.slide-next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+}
+
+.slide-prev:hover,
+.slide-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slide-next {
+    right: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/*_____________________________________________Contact Me_________________________________________________________*/
+#contact-me {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.sub-title-con {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.contact-left {
+    flex-basis: 30%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.cont-container p {
+    background: #267e6f;
+    box-shadow: 0 4px 8px rgba(58, 222, 175, 0.2), 0 6px 20px rgba(58, 222, 175, 0.3);
+    border-radius: 10px;
+    opacity: 100%;
+    color: white;
+    padding: 2%;
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: center;
+    transition: transform 0.6s ease;
+}
+
+.cont-container p:hover {
+    transform: translateY(-8px) scale(1.04);
+}
+
+.cont-container p a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.cont-container p a i {
+    font-size: 25px;
+}
+
+.cont-container p i {
+    font-size: 25px;
+}
+
+.social-icons {
+    margin-top: 25px;
+    display: flex;
+    gap: 30px;
+    padding: 0 7%;
+}
+
+.social-icons a {
+    margin-top: 20px;
+    color: #267e6f;
+    text-decoration: none;
+    line-height: 0px;
+    background: rgba(255, 255, 255, 0);
+    opacity: 100%;
+    width: 70px;
+    height: 60px;
+    border-radius: 30%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5),
+        /* Soft shadow */
+        0 6px 24px rgba(0, 0, 0, 0.5);
+    /* Deeper shadow for a subtle 3D effect */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effects */
+}
+
+.social-icons a:hover {
+    color: #f0f0f0;
+    background: #267e6f;
+    /* Slight change in background for hover */
+    box-shadow: 0 9px 18px rgba(0, 0, 0, 0.4),
+        /* More intense shadow on hover */
+        0 13px 26px rgba(0, 0, 0, 0.20);
+    /* A deeper shadow for a 3D feel */
+    transform: translateY(-3px);
+    /* Lift the button up slightly on hover */
+}
+
+.social-icons a i {
+    font-size: 50px;
+    color: #267e6f;
+}
+
+.social-icons a:hover i {
+    color: #fff;
+}
+
+.btn-cont {
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    border-radius: 15px;
+    color: #289280;
+    font-weight: 600;
+    transition: transform 0.6s ease;
+}
+
+.btn-cont:hover {
+    color: #fff;
+    background: #289280;
+    transform: translateY(-5px);
+    transition: 0.5s;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 2px solid #3adeaf;
+    outline: none;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 15px;
+    background: #333333;
+    color: #fff;
+    font-size: 18px;
+    resize: none;
+}
+
+#copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #333333;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+#copyright i {
+    color: #3adeaf;
+}
+
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    transform: translateX(-50%);
+}
+
+/* Show the toast (use with JavaScript) */
+.toast.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 1.5s;
+}
+
+@keyframes fadein {
+    from { bottom: 0; opacity: 0; }
+    to { bottom: 30px; opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { bottom: 30px; opacity: 1; }
+    to { bottom: 0; opacity: 0; }
+}
+
+
+/*--------------------------------------------CSS for small screens________________________________________*/
+nav .fa-solid {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    * {
+        font-size: 14px;
+    }
+
+    #header {
+        background-image: url(images/EditCopy.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 20px 100px;
+        width: 100%;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .header-text p {
+        margin-top: 100%;
+        font-size: 25px;
+    }
+
+    .header-text h1 {
+        margin-top: 20%;
+        font-size: 35px;
+    }
+
+    .header-text h1 span {
+        font-size: 35px;
+    }
+
+    nav .fa-solid {
+        display: block;
+        font-size: 40px;
+    }
+
+    nav ul {
+        background: rgba(40, 146, 128, 0.8);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 60px;
+        z-index: 1000;
+        transition: right 0.8s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 28px;
+    }
+
+    nav ul li a {
+        font-weight: 500;
+    }
+
+    nav ul .fa-solid {
+        position: absolute;
+        top: 22px;
+        left: 28px;
+        cursor: pointer;
+    }
+
+    /*________________________________________________About_______________________________________*/
+    #about {
+        padding: 0px;
+    }
+
+    .sub-title {
+        font-size: 30px;
+    }
+
+    .about-col-01,
+    .about-col-02 {
+        flex-basis: 100%;
+    }
+
+    .about-col-01 {
+        display: flex;
+        justify-content: center;
+        /* Center horizontally */
+        align-items: center;
+        /* Center vertically */
+        height: 100%;
+        /* Make sure the div has a height */
+        margin-bottom: 30px;
+    }
+
+    .about-col-01 img {
+        height: 300px;
+        width: 200px;
+        max-width: 100%;
+        /* Ensure the image scales down */
+        height: auto;
+    }
+
+    .about-col-02 .intro {
+        font-size: 15px;
+    }
+
+    .tab-links {
+        font-size: 17px;
+        margin-right: 20px;
+    }
+
+    .tab-contents ul li span {
+        color: #3adeaf;
+        font-size: 16px;
+    }
+
+    .tab-contents ul {
+        height: 260px;
+    }
+
+    /*_________________________________________________________Projects___________________________________________*/
+
+    #projects {
+        padding: 30px 0;
+    }
+
+    .projects-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(80%, 1fr));
+        grid-gap: 15px;
+        margin-top: 30px;
+    }
+
+    .projects-list div {
+        height: 210px;
+    }
+
+    .projects-list div ul {
+        display: none;
+    }
+
+    .projects-list div h2 {
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .projects-list div a {
+        position: relative;
+        bottom: 10px;
+        padding: 8px;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        margin-top: 30px;
+    }
+
+    .projects-list div a:hover {
+        background: #267e6f;
+        /* Slight change in background for hover */
+        box-shadow: 0 9px 18px rgba(0, 0, 0, 0.4),
+            /* More intense shadow on hover */
+            0 13px 26px rgba(0, 0, 0, 0.20);
+        /* A deeper shadow for a 3D feel */
+        transform: translateY(-3px);
+    }
+
+    /*________________________________________________________publications______________________________________*/
+
+    #publication {
+        padding: 10px 0;
+    }
+
+    .publication-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(60%, 1fr));
+        grid-gap: 15px;
+        margin-top: 30px;
+    }
+
+    .publication-item img {
+        width: 100%;
+        /* Scale the image to fit the width of the frame */
+        height: 250px;
+        /* Maintain aspect ratio */
+        display: block;
+        border-radius: 12px;
+        /* Ensure the image covers the entire frame area */
+        /* Ensure it doesn't exceed the frame's height */
+        transition: transform 0.6s;
+    }
+
+    .layer h3 {
+        margin-top: 45px;
+        font-size: 20px;
+    }
+
+    .layer p {
+        font-size: 15px;
+    }
+
+    .layer a {
+        height: 50px;
+        width: 50px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+
+    .layer a i {
+        font-size: 20px;
+    }
+
+
+    /*________________________________________________________Reasearch___________________________________________________*/
+
+    .research-list {
+        display: flex;
+        grid-template-columns: repeat(auto-fit, minmax(80%, 1fr));
+        grid-gap: 15px;
+        margin-top: 30px;
+    }
+
+    .research-item {
+        position: relative;
+        width: 100%;
+        /* Set your preferred width */
+        height: 250px;
+        /* Set your preferred height */
+        border-radius: 12px;
+        overflow: hidden;
+        background: #f5f5f5;
+        /* Background color of the container */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #262626;
+    }
+
+    .overlay-layer h3 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+
+    /*_________________________________________________________mycv___________________________________________________________*/
+
+    .view-cv-btn {
+        display: none;
+    }
+
+    #cv-section {
+        padding: 20px 0;
+    }
+
+    .cv-preview {
+        position: relative;
+        width: 100%;
+        /* Adjust width to match your design */
+        height: 75%;
+        /* Aspect ratio for CV preview */
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .cv-preview img {
+        border-radius: 12px;
+        border: none;
+        transition: transform 0.6s ease;
+        width: 100%;
+        /* Adjust width to match your design */
+        height: 100%;
+    }
+
+    /*_____________________________________________________________Achievements_______________________________________________*/
+    #extracurricular {
+        padding: 20px 0;
+    }
+
+    .act-gallery-title {
+        font-size: 20px;
+    }
+
+    .activity-item {
+        padding: 15px;
+    }
+
+    .activity-item h3 {
+        font-size: 1em;
+    }
+
+    .activity-item p {
+        font-size: 0.8em;
+    }
+
+    .slide-images {
+        flex-direction: column;
+        /* Stack the images vertically */
+    }
+
+    .image-container {
+        width: 100%;
+        /* Each image takes up the full width when stacked */
+    }
+
+    .slideshow-container {
+        width: 100%;
+        /* Ensure the slideshow is responsive */
+    }
+
+    .slide-caption {
+        font-size: 12px;
+        /* Reduce caption size for smaller screens */
+    }
+
+    .slide-prev,
+    .slide-next {
+        font-size: 14px;
+        /* Smaller navigation buttons on mobile */
+    }
+
+    .image-container img {
+        width: 100%;
+        /* Make images responsive */
+        height: 240px;
+        /* Maintain aspect ratio */
+    }
+
+    .gallery-title {
+        font-size: 20px;
+    }
+
+    .slide-prev,
+    .slide-next{
+        top: 42%
+    }
+    /*_________________________________________________________________Contact Me_______________________________________________*/
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-left,
+    .contact-right {
+        max-width: 100%;
+    }
+
+    .contact-right {
+        margin-top: 15px;
+    }
+
+    .sub-title-con {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .social-icons {
+        text-align: center;
+    }
+
+    .cont-container p {
+        font-size: 1em;
+    }
+
+    .social-icons a {
+        font-size: 1.3em;
+    }
+
+    .cont-container p a i {
+        font-size: 20px;
+    }
+
+    .cont-container p i {
+        font-size: 20px;
+    }
+
+    .social-icons {
+        margin-top: 25px;
+        display: flex;
+        gap: 15px;
+        padding: 0 0%;
+    }
+
+    .social-icons a {
+        width: 60px;
+        height: 50px;
+        margin-top: 5px;
+    }
+
+    .social-icons a i {
+        font-size: 35px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        margin-top: 10px;
+        /* Add some space between the textarea and the button */
+    }
+
+    /*___________________________________________________________move to top btn________________________________________*/
+    .move-to-top {
+        z-index: 2000;
+        bottom: 40px;
+        right: 20px;
+        height: 52px;
+        width: 52px;
+        color: #97ffe5;
+        background-color: rgba(38, 38, 38, 0.6);
+        /* 80% opacity */
+        opacity: 60%;
+    }
+
+    .move-to-top:hover {
+        background-color: rgba(38, 38, 38, 0.6);
+    }
+
+    .move-to-top i {
+        font-size: 25px;
+    }
+
+    .toast {
+        visibility: hidden;
+        min-width: 250px;
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        border-radius: 2px;
+        padding: 16px;
+        position: fixed;
+        z-index: 1;
+        left: 50%;
+        bottom: 30px;
+        font-size: 17px;
+        transform: translateX(-50%);
+        transition: 0.5s;
+    }
+    
+    .toast.show {
+        visibility: visible;
+        animation: fadein 0.5s, fadeout 0.5s 1.5s;
+    }
+    
+    @keyframes fadein {
+        from { bottom: 0; opacity: 0; }
+        to { bottom: 30px; opacity: 1; }
+    }
+    
+    @keyframes fadeout {
+        from { bottom: 30px; opacity: 1; }
+        to { bottom: 0; opacity: 0; }
+    }
+}

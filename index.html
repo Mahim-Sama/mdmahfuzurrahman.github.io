@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" , content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahfuzur Mahim</title>
+    <link href="favicon/favicon.ico" rel="icon" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/32f2f78ae7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <a href="#" class="move-to-top" id="moveToTopBtn"><i class="fa-solid fa-arrow-up"></i></a>
+    <div id="header">
+        <div class="container">
+            <nav id="navbar">
+                <img src="favicon/Logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#publication">Publication</a></li>
+                    <li><a href="#researches">Research Works</a></li>
+                    <li><a href="#cv-section">My CV</a></li>
+                    <li><a href="#extracurricular">Achievements</a></li>
+                    <li><a href="#contact-me">Contact Me!</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" id="menu" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Machine Learning Engineer</p>
+                <h1>Hi, I'm Md. Mahfuzur Rahman<br><span>Mahim</span> From Bangladesh</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-01">
+                    <img src="images/img_02.jpg" alt="Profile Image">
+                </div>
+                <div class="about-col-02">
+                    <h1 class="sub-title">About me</h1>
+                    <p class="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                        optio, eaque rerum!
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="open_tab('skills')">Skills</p>
+                        <p class="tab-links" onclick="open_tab('experience')">Experience</p>
+                        <p class="tab-links" onclick="open_tab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Languages</span><br>Python, C/C++, Java</li>
+                            <li><span>Scripting</span><br>LATEX</li>
+                            <!--<li><span>IDE</span><br>PyCharm, Jupyter Notebook, CodeBlocks, Visual Studio</li>-->
+                            <!--<li><span>Editors</span><br>Visual Studio Code, Notepad++</li>-->
+                            <li><span>Database</span><br>MS SQL</li>
+                            <li><span>MS Office</span><br>MS Word, MS Powerpoint, MS Excel</li>
+                            <li><span>Architectural Paradigm for ML</span><br>TensorFlow, PyTorch, Langchain,
+                                RAG(Retrieval Augmented Generation), Knowledge Graph</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Silicon Orchard LTD.</span><br>JUNiOR SOFTWARE ENGiNEER (MACHiNE LEARNiNG TEAM)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Ahsanullah University of Sceience and Technology</span><br>BACHELOR OF SCiENCE iN
+                                COMPUTER SCiENCE AND ENGiNEERiNG<br>CGPA:2.849/4.00</li>
+                            <li><span>BCIC college</span><br>HiGHER SECONDARY SCHOOL CERTiFiCATE EXAMiNATiON<br>GPA:
+                                4.25/5.00</li>
+                            <li><span>Monipur High School</span><br>SECONDARY SCHOOL CERTiFiCATE EXAMiNATiON<br>GPA:
+                                5.00/5.00</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--______________________PROJECTS________________________________________-->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="projects-list">
+                <div>
+                    <h2>CONVERTING SEMANTIC SEGMENTATION TO OBJECT DETECTION</h2>
+                    <p>
+                    <ul>
+                        <li>Converted Semantic segmentations to object detection(bounding box annotations)</li>
+                        <li>Used python OpenCV library for the main convertion task</li>
+                        <li>Used the images from the dataset RescueNet by Rahnemoonfar et.al. for my task</li>
+                        <li>Converted the coordinates of the mask objects to YOLO coordinate format</li>
+                        <li>The bounding boxes were drawn considering the objects minimum area so that the bounding
+                            boxes don’t overlap much</li>
+                    </ul>
+                    </p>
+                    <a href="https://github.com/Mahim-Sama/Converting_dataset_Semantic_to_Obj_detection">Open in GitHub
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div>
+                    <h2>ML LEARNING ECG DATASET</h2>
+                    <p>
+                    <ul>
+                        <li>A General ML Learning classification task using supervised unsupervised and ensemble
+                            approach</li>
+                        <li>Performed EDA; Explored the dataset and implemented five supervised models (logistic
+                            regression, decision tree, linear SVC, SVM, k‑nearest
+                            neighbors): One unsupervised approach (k‑means clustering); Three ensemble methods (Random
+                            Forest, Gradient Boosting, XGBoost).
+                        </li>
+                    </ul>
+                    </p>
+                    <a href="https://github.com/Mahim-Sama/ML_learning_ECG_dataset">Open in GitHub <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div>
+                    <h2>APPAREL VGG NET</h2>
+                    <p>
+                    <ul>
+                        <li>Used VGG16 as a pretrained model to train the Apparel Dataset from kaggle. Necessary
+                            comments to understand the code are also provided as
+                            it is a learning task.</li>
+                    </ul>
+                    </p>
+                    <a href="https://github.com/Mahim-Sama/Apparel_dataset_VGG_net">Open in GitHub <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div>
+                    <h2>APPAREL OWN MODEL PYTORCH</h2>
+                    <p>
+                    <ul>
+                        <li>Used Pytorch framework to build a custom CNN Model using the ”Apparel Dataset” from kaggle.
+                        </li>
+                    </ul>
+                    </p>
+                    <a href="https://github.com/Mahim-Sama/own_CNN_model_pytorch">Open in GitHub <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div>
+                    <h2>APPAREL OWN MODEL KERAS</h2>
+                    <p>
+                    <ul>
+                        <li>Used keras to build a basic CNN model</li>
+                        <li>Used Apparel Dataset from kaggle</li>
+                    </ul>
+                    </p>
+                    <a href="https://github.com/Mahim-Sama/own_CNN_model_keras">Open in GitHub <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div>
+                    <h2>APPAREL RESNET</h2>
+                    <p>
+                    <ul>
+                        <li>Used Pretrained Model ResNet version 2 on Apparel Dataset From Kaggle to train</li>
+                    </ul>
+                    </p>
+                    <a href="https://github.com/Mahim-Sama/Apparel_resNetv2">Open in GitHub <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <div>
+                    <h2>APPAREL INCEPTION NET</h2>
+                    <p>
+                    <ul>
+                        <li>Used pretrained model Inception Net to train the image dataset</li>
+                        <li>Used Apparel Dataset From Kaggle</li>
+                    </ul>
+                    </p>
+                    <a href="https://github.com/Mahim-Sama/Apparel_incetionNet">Open in GitHub <i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--_____________________________________________publications__________________________________________________________-->
+    <div id="publication">
+        <div class="container">
+            <h1 class="sub-title">Publications</h1>
+            <div class="publication-list">
+                <div class="publication-item">
+                    <img src="images/Publication_01.jpg" alt="publication_UAV">
+                    <div class="layer">
+                        <h3>Unmanned Areial Vehichle</h3>
+                        <p>Diverse Applications of UAV Datasets in Segmentation, Classification, Detection, and Tracking
+                        </p>
+                        <div class="icon-container">
+                            <a href="https://www.researchgate.net/publication/383793600_UAV_Unmanned_Aerial_Vehicles_Diverse_Applications_of_UAV_Datasets_in_Segmentation_Classification_Detection_and_Tracking"
+                                target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="publication-item">
+                    <img src="images/Publication_02.jpg" alt="publication_Uddessho">
+                    <div class="layer">
+                        <h3>Uddessho</h3>
+                        <p>An Extensive Benchmark Dataset for Multimodal Author Intent Classification in Low-Resource
+                            Bangla Language</p>
+                        <div class="icon-container">
+                            <a href="https://www.researchgate.net/publication/384075331_Uddessho_An_Extensive_Benchmark_Dataset_for_Multimodal_Author_Intent_Classification_in_Low-Resource_Bangla_Language"
+                                target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--_________________________________________Researches___________________________________________-->
+    <div id="researches">
+        <div class="container">
+            <h1 class="sub-title">Research Works</h1>
+            <div class="research-list">
+                <div class="research-item">
+                    <div class="content">
+                        <h2>Knowledge Graph Embedding and Graph Convolutional Network based approach to Gene‑Disease
+                            Association
+                            Prediction</h2>
+                    </div>
+                    <div class="overlay-layer">
+                        <h3>This research is still in progress. Please wait untill the preprint is published</h3>
+                        <div class="lds-roller">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------------------------MY CV------------------------------------------------------>
+    <div id="cv-section">
+        <div class="container">
+            <h1 class="sub-title">My CV</h1>
+            <div class="cv-preview">
+                <!-- Embed the PDF viewer inside a div -->
+                <img src="images/CV_Mahim____.jpg" alt="CV Cover">
+                <!-- Layer for hover effect -->
+                <div class="layer-cv">
+                    <div class="icon-container-cv">
+                        <a href="#view-cv" class="view-cv-btn" onclick="openModal()"><i class="fa-solid fa-eye"></i><br>
+                            View Full CV</a>
+                        <a href="docs/CV_Mahim____.pdf" download class="download-btn"><i
+                                class="fa-solid fa-download"></i><br>Download CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for full PDF view -->
+        <div id="cv-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()"><i class="fa-solid fa-x"></i></span>
+                <iframe src="docs/CV_Mahim____.pdf" width="100%" height="800px"></iframe>
+            </div>
+        </div>
+    </div>
+    <!--_______________________________________________ACHIEVEMENTS__________________________________________________-->
+    <div id="extracurricular">
+        <div class="container">
+            <h1 class="sub-title">Extracurricular Activities & Achievements</h1>
+
+            <div class="activity-list">
+                <p class="act-gallery-title">Events</p>
+                <div class="event-gallery">
+                    <div class="activity-item">
+                        <h3>AUST CSE Carnival 1.0</h3>
+                        <p>lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="activity-item">
+                        <h3>AUST CSE ODYSSEY Spring 2022</h3>
+                        <p>lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="activity-item">
+                        <h3>Naimul Memorial Cricet League Spring 2022</h3>
+                        <p>lorem ipsum dolor sit amet</p>
+                    </div>
+                </div>
+            </div>
+            <div class="certificates">
+                <div class="certificate-gallery">
+                    <h2 class="gallery-title">Certificates</h2>
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+                        <!-- Full-width images with number and caption text (Slide 1) -->
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 2</div>
+                            <div class="slide-images">
+                                <div class="image-container">
+                                    <img src="images/GM_certificate_appreciation.jpg" alt="Image 1">
+                                </div>
+                                <div class="image-container">
+                                    <img src="images/Coursera CJFPSZGJLL5N-1.png" alt="Image 2">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Full-width images with number and caption text (Slide 2) -->
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 3</div>
+                            <div class="slide-images">
+                                <div class="image-container">
+                                    <img src="images/Coursera Z63YV38HEAD8-1.png" alt="Image 1">
+                                </div>
+                                <div class="image-container">
+                                    <img src="images/Certificate_02.png" alt="Image 2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 3</div>
+                            <div class="slide-images">
+                                <div class="image-container">
+                                    <img src="images/Certificate_03.png" alt="Image 3">
+                                </div>
+                                <div class="image-container">
+                                    <img src="images/Certificate_04.png" alt="Image 4">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Next and previous buttons -->
+                        <a class="slide-prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="slide-next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+
+                    <!-- The dots/circles -->
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--_____________________________________________________CONTACT ME_____________________________________________________-->
+    <div id="contact-me">
+        <div class="container">
+            <h1 class="sub-title"></h1>
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title-con">Contact Me</h1>
+                    <div class="cont-container">
+                        <p><a href="mailto:mahim1066@gmail.com"><i class="fa-regular fa-paper-plane"></i>
+                                mahim1066@gmail.com</a></p>
+                        <p><i class="fa-solid fa-phone-volume"></i> +88 019 14 603813</p>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://www.researchgate.net/profile/Md-Mahfuzur-Rahman-32"><i
+                                class="fa-brands fa-researchgate"></i></a>
+                        <a href="https://scholar.google.com/citations?user=2MtNSl0AAAAJ&hl=en"><i
+                                class="fa-brands fa-google-scholar"></i></a>
+                        <a href="https://www.linkedin.com/in/mahfuzur-mahim-rahman/"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Mahim-Sama"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://x.com/MI05ic50"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email Address" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn-cont">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="toast" class="toast">Successfully Submitted!</div>
+    <div id="copyright">
+        <p>Copyright <i class="fa-regular fa-copyright"></i> Mahim-Sama</p>
+    </div>
+    <script>
+        var tab_links = document.getElementsByClassName("tab-links");
+        var tab_contents = document.getElementsByClassName("tab-contents");
+        var side_menu = document.getElementById("sidemenu");
+        var menu = document.getElementById("menu")
+
+        function open_tab(tab_name) {
+            for (tab_link of tab_links) {
+                tab_link.classList.remove("active-link");
+            }
+            for (tab_content of tab_contents) {
+                tab_content.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tab_name).classList.add("active-tab")
+        }
+
+        function openModal() {
+            document.getElementById('cv-modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('cv-modal').style.display = 'none';
+        }
+
+        function openmenu() {
+            side_menu.style.right = "0";
+            menu.style.display = "none";
+        }
+        function closemenu() {
+            side_menu.style.right = "-200px";
+            setTimeout(function () {
+                menu.style.display = "block"; // Show the menu after 0.8s delay
+            }, 500); // 800ms delay
+        }
+
+        // Get the button
+        const moveToTopBtn = document.getElementById('moveToTopBtn');
+
+        // Show or hide the button when scrolling
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                moveToTopBtn.classList.add('show-move-to-top');
+            } else {
+                moveToTopBtn.classList.remove('show-move-to-top');
+            }
+        };
+
+        // Smooth scroll to the top when the button is clicked
+        moveToTopBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+    </script>
+    <script>
+        let slideIndex = 1;
+        let slideInterval;
+
+        // Show the initial slide
+        showSlides(slideIndex);
+
+        // Start the automatic slide change with a 5-second interval
+        startAutoSlides();
+
+        // Next/previous controls
+        function plusSlides(n) {
+            clearInterval(slideInterval); // Stop the automatic sliding when manually navigating
+            showSlides(slideIndex += n);
+            startAutoSlides(); // Restart auto-sliding after manual navigation
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            clearInterval(slideInterval); // Stop the automatic sliding when manually navigating
+            showSlides(slideIndex = n);
+            startAutoSlides(); // Restart auto-sliding after manual navigation
+        }
+
+        // Function to show the slides
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        // Function to start the automatic slide change
+        function startAutoSlides() {
+            slideInterval = setInterval(function () {
+                plusSlides(1); // Move to the next slide every 5 seconds
+            }, 5000); // 5000ms = 5 seconds
+        }
+
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby7_6g6qtsROuqIBTKIXAX57jHYbTeHnD_FBYP4Ytg1uvkXX2zBuSI4g8Dm8C-lNN0P/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const toast = document.getElementById('toast');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    console.log('Success!', response);
+                    form.reset(); // Clear the form fields after submission
+                    showToast(); // Show toast notification
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+
+        function showToast() {
+            toast.className = "toast show";
+            setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 900);
+        }
+    </script>
+
+</body>
+
+</html>
