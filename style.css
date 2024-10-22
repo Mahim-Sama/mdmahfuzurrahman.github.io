@@ -145,11 +145,16 @@ html {
 }
 
 nav {
-    position: static;
+    position: fixed;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+    background: black;
+    z-index: 2500;
+    top: 0;
+    left: 0;
 }
 
 .logo {
