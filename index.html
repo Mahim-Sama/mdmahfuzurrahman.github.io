@@ -45,10 +45,13 @@
                 <div class="about-col-02">
                     <h1 class="sub-title">About me</h1>
                     <p class="intro">Hello! My name is Md. Mahfuzur Rahman, but you can call me Mahim.
-                         😊 I am an aspiring Machine Learning engineer passionate about bringing innovation to the industry through academic excellence and practical experience.
-                          While I aim to make impactful contributions in the field, I recognize that pursuing higher studies is crucial for deeper expertise.
-                          This combination of academic knowledge and hands-on experience will best position me to develop innovative solutions that make a positive difference.
-                           I approach this journey humbly, knowing there is always more to learn and discover.
+                        😊 I am an aspiring Machine Learning engineer passionate about bringing innovation to the
+                        industry through academic excellence and practical experience.
+                        While I aim to make impactful contributions in the field, I recognize that pursuing higher
+                        studies is crucial for deeper expertise.
+                        This combination of academic knowledge and hands-on experience will best position me to develop
+                        innovative solutions that make a positive difference.
+                        I approach this journey humbly, knowing there is always more to learn and discover.
                     </p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="open_tab('skills')">Skills</p>
@@ -297,10 +300,12 @@
                             <div class="numbertext">1 / 2</div>
                             <div class="slide-images">
                                 <div class="image-container">
-                                    <img src="images/GM_certificate_appreciation.jpg" alt="Image 1">
+                                    <img src="images/GM_certificate_appreciation.jpg" alt="Image 1"
+                                        onclick="opencertModal(this)">
                                 </div>
                                 <div class="image-container">
-                                    <img src="images/Coursera CJFPSZGJLL5N-1.png" alt="Image 2">
+                                    <img src="images/Coursera CJFPSZGJLL5N-1.png" alt="Image 2"
+                                        onclick="opencertModal(this)">
                                 </div>
                             </div>
                         </div>
@@ -310,10 +315,11 @@
                             <div class="numbertext">2 / 3</div>
                             <div class="slide-images">
                                 <div class="image-container">
-                                    <img src="images/Coursera Z63YV38HEAD8-1.png" alt="Image 1">
+                                    <img src="images/Coursera Z63YV38HEAD8-1.png" alt="Image 1"
+                                        onclick="opencertModal(this)">
                                 </div>
                                 <div class="image-container">
-                                    <img src="images/Certificate_02.png" alt="Image 2">
+                                    <img src="images/Certificate_02.png" alt="Image 2" onclick="opencertModal(this)">
                                 </div>
                             </div>
                         </div>
@@ -321,10 +327,10 @@
                             <div class="numbertext">3 / 3</div>
                             <div class="slide-images">
                                 <div class="image-container">
-                                    <img src="images/Certificate_03.png" alt="Image 3">
+                                    <img src="images/Certificate_03.png" alt="Image 3" onclick="opencertModal(this)">
                                 </div>
                                 <div class="image-container">
-                                    <img src="images/Certificate_04.png" alt="Image 4">
+                                    <img src="images/Certificate_04.png" alt="Image 4" onclick="opencertModal(this)">
                                 </div>
                             </div>
                         </div>
@@ -343,12 +349,13 @@
 
                 </div>
             </div>
-            <div class="modal-cert">
-
+            <div id="imageModal-cert" class="modal-cert">
+                <span class="close-cert" onclick="closecertModal()">&times;</span>
+                <img class="modal-content-cert" id="modalImage-cert">
             </div>
         </div>
     </div>
-    
+
     <!--_____________________________________________________CONTACT ME_____________________________________________________-->
     <div id="contact-me">
         <div class="container">
@@ -517,6 +524,24 @@
         function showToast() {
             toast.className = "toast show";
             setTimeout(() => { toast.className = toast.className.replace("show", ""); }, 900);
+        }
+    </script>
+    <script>
+        // Open the modal and display the clicked image
+        function opencertModal(imgElement) {
+            var modal = document.getElementById("imageModal-cert");
+            var modalImg = document.getElementById("modalImage-cert");
+
+            modal.style.display = "block";
+            modalImg.src = imgElement.src;
+        }
+
+        // Close the modal
+        window.onclick = function (event) {
+            var modal = document.getElementById("imageModal-cert");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
         }
     </script>
 

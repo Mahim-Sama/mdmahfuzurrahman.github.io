@@ -806,19 +806,21 @@ nav ul li a:hover::after {
     box-shadow: 0 9px 18px rgba(0, 0, 0, 0.4),
         /* More intense shadow on hover */
         0 13px 26px rgba(0, 0, 0, 0.20);
+    margin-top: 50px;
 }
 
 .modal-content {
     background-color: #289280;
     border-radius: 16px;
-    padding: 12px;
+    padding: 8px;
     width: 80%;
     height: 90%;
     position: relative;
-    box-shadow: 0 9px 18px rgba(0, 0, 0, 0.4),
+    box-shadow: 0 9px 9px rgba(0, 0, 0, 0.4),
         /* More intense shadow on hover */
-        0 13px 26px rgba(0, 0, 0, 0.20);
-}
+        0 13px 18px rgba(0, 0, 0, 0.20);
+    margin-top: 50px;
+}   
 
 /* Close button inside the modal */
 .close-btn {
@@ -1031,6 +1033,47 @@ nav ul li a:hover::after {
     to {
         opacity: 1
     }
+}
+/*_____________________________________________________________Certificate MOdal_______________________________*/
+/* Style for the modal (hidden by default) */
+.modal-cert {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background with transparency */
+}
+
+/* Modal content (image) */
+.modal-content-cert {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 900px;
+    border: 2px solid red;
+    margin-top: 10%;
+}
+
+/* The close button */
+.close-cert {
+    position: absolute;
+    top: 25px;
+    right: 60px;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-cert:hover,
+.close-cert:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /*_____________________________________________Contact Me_________________________________________________________*/
