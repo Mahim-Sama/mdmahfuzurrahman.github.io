@@ -306,6 +306,17 @@ nav ul li a:hover::after {
     margin: 10px 0;
 }
 
+.tab-contents ul li ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.tab-contents ul li ul li {
+    list-style: disc;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
 .tab-contents ul li span {
     color: #3adeaf;
     font-size: 20px;
@@ -407,7 +418,7 @@ nav ul li a:hover::after {
 .publication-list {
     display: flex;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 8%;
+    grid-gap: 20px;
     margin-top: 50px;
 }
 
